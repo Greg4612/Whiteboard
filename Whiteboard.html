@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+  <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Whiteboard</title>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+
+<link href="style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+<div id="statusField"></div>
+
+<div id="main">
+<h1 id="header">Whiteboard</h1>
+  <div id="leftPanel">
+    <!--Contains the user list-->
+    <ul id="userList"></ul>
+    
+    <div id="chat">
+      <!--Incoming chat messages-->
+      <div id="chatPane"></div>
+      
+      <!--Outgoing chat form-->
+      <div id="inputContainer"><input type="text" id="chatOut"/></div>
+      <div id="submitContainer"><input type="submit" id="chatSend" value="Send"/></div>
+    </div>
+  </div>
+  
+  <div id="rightPanel">
+    <div id="controls">
+		 
+      Size:
+      <select id="thickness" class="fixed">
+        <option value="1">1</option>
+        <option value="3">3</option>
+        <option value="5">5</option>
+        <option value="7">7</option>
+        <option value="9">9</option>
+        <option value="11">11</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+        <option value="50">50</option>
+        <option value="70">70</option>
+      </select>
+  
+      Color:
+      <select id="color">
+        <option value="pink">Pink</option>
+        <option value="red">Red</option>
+        <option value="fuchsia">Fuchsia</option>
+        <option value="orange">Orange</option>
+        <option value="yellow">Yellow</option>
+        <option value="lime">Lime</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="purple">Purple</option>
+        <option value="black">Black</option>
+        <option value="white">Eraser</option>
+      </select>
+		  <input type="button" id="clear" value="Clear">
+    <input type="button" id="save" value="Save"> 
+    </div>
+    
+    <div id="canvasContainer">
+      <!--The canvas where drawings will be displayed-->
+      <canvas id="canvas"></canvas>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="http://cdn.unioncloud.io/Orbiter_latest.js"></script>
+<script type="text/javascript" src="ui.js"></script>
+<script type="text/javascript" src="orbiterboot.js"></script>
+<script type="text/javascript" src="unionchat.js"></script>
+<script type="text/javascript" src="userlist.js"></script>
+<script type="text/javascript" src="Drawing.js"></script>
+
+</body>
+</html>
